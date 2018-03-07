@@ -4,8 +4,8 @@
 }
 
 body {
-    background-color: rgb(237,237,237);
-    font-family: Arial, Helvetica, Sans-Serif;
+    background: #e6e6e6;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 12px;
 }
 
@@ -15,12 +15,13 @@ body {
 }
 
 .wrapper {
-    width: 950px;
+    width: 75%;
     margin: auto;
+    
 }
 
 .content {
-    width: 100%;
+    width: 90%;
     background-color: rgb(254,254,254);
     border: 1px solid rgb(224,224,224);
     border-radius: 5px 5px 5px 5px;
@@ -28,6 +29,8 @@ body {
     margin-top: 8px;
     margin-bottom: 8px;
     min-height: 400px;
+    padding: 5%;
+
 }
 
 .menu {
@@ -68,14 +71,16 @@ body {
 }
 
 .footer {
-    height: 50px;
-    background-color: rgb(10,110,178);
-    color: rgb(255,255,255);
-    border-radius: 5px 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer h2 {
         padding: 15px;
         text-align: center;
     }
-
+img {
+    max-height: 50px;
+}

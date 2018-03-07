@@ -14,13 +14,12 @@ public partial class Category : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         GridView1.Visible = false;
+        gridviewid.Visible = false;
+       
     }
     public void Button1_Click(object sender, EventArgs e)
     {
-        //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
-        //CheckBoxList1.Items.Add(new ListItem("Argentina", "Argentina"));
-        //CheckBoxList1.Items.Add(new ListItem("Australia", "Australia"));
-        //CheckBoxList1.Items.Add(new ListItem("Items 3", "Items 3"));
+        
     }
 
     protected void Countries_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,10 +45,12 @@ public partial class Category : System.Web.UI.Page
                 GridView1.DataSource = dt_f;
                 GridView1.DataBind();
                 GridView1.Visible = true;
+                gridviewid.Visible = true;
                 conn.Close();
             }
             catch (SqlException ex)
             {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + ex.ToString() + "');", true);
             }
         }
         else
