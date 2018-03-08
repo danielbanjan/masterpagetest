@@ -52,6 +52,9 @@ public partial class FeaturedAndDeboost : System.Web.UI.Page
                         sda_f = new SqlDataAdapter(sqlcom_f);
                         dt_f = new DataTable();
                         sda_f.Fill(dt_f);
+                        //var row = dt_f.Select("domain = 'jobino.de'").FirstOrDefault();
+                        //string searchedValue = row["categorykey"].ToString();
+                        //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + searchedValue + "');", true);
                         featured_gv.DataSource = dt_f;
                         featured_gv.DataBind();
                         gv_featured_id.Visible = true;
