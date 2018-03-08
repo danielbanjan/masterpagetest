@@ -1,15 +1,22 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Category.aspx.cs" Inherits="Category" %>
+﻿<%@ Page Title="Delete Users" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DeleteUsers.aspx.cs" Inherits="DeleteUsers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" Runat="Server">
-    Category
+    Delete Users
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" Runat="Server">        
-    <div style="padding-top:5px;">Please select a country:</div>
-    <div style="padding-top:5px;padding-bottom:25px;">
-        <asp:DropDownList ID="Countries" runat="server" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True">
-            <asp:ListItem Enabled="true" Text="Select Country" Value="-1"></asp:ListItem>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" Runat="Server">
+    <div style="width:100%">
+        <div id="inputemail" style="width:30%;height:5%;padding-bottom:5px;padding-right:12px; float: left;" runat="server">Please Input Email</div>
+        <div> <asp:CheckBox id="checkbox1" runat="server" AutoPostBack="True" Text="Select All" TextAlign="Right" OnCheckedChanged="Check_Clicked"/>
+        </div>
+    </div>
+    <div style="width:25%;padding-right:5px;float: left;"><asp:TextBox ID="TextBox1" runat="server" Width="300px" Height="100px" TextMode="MultiLine"></asp:TextBox></div>
+    
+    <div style="width:5%;padding-right:5px;float: left;"><asp:Button runat="server" ID="btn" class ="button" Text="Delete" OnClientClick="javascript:return confirm('Are you sure you want to delete?');" 
+        onclick="Button1_Click"/></div>
+    <div style="width:25%;float:left">
+        <asp:CheckBoxList ID="CheckBoxList1" runat="server" AutoPostBack="True" >
             <asp:ListItem Text="Argentina" Value="AR"></asp:ListItem>
             <asp:ListItem Text="Australia" Value="AU"></asp:ListItem>
             <asp:ListItem Text="Austria" Value="AT"></asp:ListItem>
@@ -34,12 +41,7 @@
             <asp:ListItem Text="Turkey" Value="TR"></asp:ListItem>
             <asp:ListItem Text="UK" Value="UK"></asp:ListItem>
             <asp:ListItem Text="Vietnam" Value="VN"></asp:ListItem>
-        </asp:DropDownList>
-    </div>
-    <div id="div1" class="footer" style="font-size:20px" runat = "server" ></div>
-    <div id="gridviewid" runat="server" style="width: 100%; max-height: 300px; overflow: scroll; ">
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateEditButton="True">
-        </asp:GridView>
+        </asp:CheckBoxList>
     </div>
 </asp:Content>
 

@@ -19,8 +19,8 @@
         <div class="clear"></div>
         <div class ="menu">
             <ul>
-                <li class="navigation_first_item"><a href="Default.aspx">Home</a></li>
-                <li><a href="Category.aspx">Category</a></li>
+                <li class="navigation_first_item"><a href="DeleteUsers.aspx">Delete Users</a></li>
+                <li><a href="FeaturedAndDeboost.aspx">Featured And Deboost</a></li>
                 <li><a href="Contactus.aspx">Contact Us</a></li>
                 <li><a href="Aboutus.aspx">About Us</a></li>
             </ul>

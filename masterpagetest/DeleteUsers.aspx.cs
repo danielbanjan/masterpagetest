@@ -9,7 +9,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 
-public partial class _Default : System.Web.UI.Page
+public partial class DeleteUsers : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -102,6 +102,7 @@ public partial class _Default : System.Web.UI.Page
             foreach (ListItem item in CheckBoxList1.Items)
             {
                 item.Selected = false;
+                checkbox1.Text = "Select All";
             }
         }
     }
