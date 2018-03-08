@@ -9,7 +9,7 @@
     <div style="width:15%;float:left;">
         <div style="padding-top:5px;">Please select a country:</div>
         <div style="padding-top:5px;padding-bottom:25px;">
-            <asp:DropDownList ID="Countries" runat="server" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True">
+            <asp:DropDownList ID="Countries" runat="server" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True" Width="75%">
                 <asp:ListItem Enabled="true" Text="Select Country" Value="-1"></asp:ListItem>
                 <asp:ListItem Text="Argentina" Value="AR"></asp:ListItem>
                 <asp:ListItem Text="Australia" Value="AU"></asp:ListItem>
@@ -36,19 +36,30 @@
                 <asp:ListItem Text="UK" Value="UK"></asp:ListItem>
                 <asp:ListItem Text="Vietnam" Value="VN"></asp:ListItem>
             </asp:DropDownList>
+            <div style="padding-top:15px;">
+                <asp:CheckBox ID="SA_cbx_fdm" style="padding-left:3px" runat="server" AutoPostBack="True" Text="Select All" OnCheckedChanged="SA_cbx_fdm_CheckedChanged" />
+                <asp:CheckBoxList ID="fdm_cbx" runat="server" style="border:solid;border-width:0.1px;border-color:darkgrey;width:75%" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True">
+                    <asp:ListItem>Featured Campaigns</asp:ListItem>
+                    <asp:ListItem>Deboost Campaigns</asp:ListItem>
+                    <asp:ListItem>MaxNum Settings</asp:ListItem>
+                </asp:CheckBoxList>
+            </div>
         </div>
     </div>
-    <div style="width:85%;float:left;">
-        <div id="div1" class="footer" style="font-size:20px;padding:15px;" runat = "server" ></div>
-        <div id="gv_featured_title_id" class="footer" runat = "server"><h3>Featured Campaigns</h3></div>
+    <div style="width:85%;float:left;overflow: auto;">
+        <div id="gv_featured_title_id" class="footer" runat = "server"><h3 id="gv_featured_title_id_h3">Featured Campaigns</h3></div>
         <div id="gv_featured_id" runat="server" style="width: 100%;max-height: 200px; resize: both; overflow: auto; ">
             <asp:GridView ID="featured_gv" runat="server" AllowSorting="True" AutoGenerateEditButton="True">
             </asp:GridView>
         </div>
-        <div id="div2" class="footer" style="font-size:20px; padding:15px;" runat = "server" ></div>
-        <div id="gv_deboost_title_id" class="footer" runat = "server"><h3>Deboost Campaigns</h3> </div>
+        <div id="gv_deboost_title_id" class="footer" runat = "server"><h3 id="gv_deboost_title_id_h3">Deboost Campaigns</h3> </div>
         <div id="gv_deboost_id" runat="server" style="width: 100%;  max-height: 200px; resize: both; overflow: auto;">
             <asp:GridView ID="deboost_gv" runat="server" AllowSorting="True" AutoGenerateEditButton="True">
+            </asp:GridView>
+        </div>
+        <div id="gv_maxnum_title_id" class="footer" runat = "server"><h3 id="gv_maxnum_title_id_h3">MaxNum Settings</h3> </div>
+        <div id="gv_maxnum_id" runat="server" style="width: 100%;  max-height: 200px; resize: both; overflow: auto;">
+            <asp:GridView ID="gv_maxnum" runat="server" AllowSorting="True" AutoGenerateEditButton="True">
             </asp:GridView>
         </div>
     </div>

@@ -96,8 +96,8 @@ public partial class DeleteUsers : System.Web.UI.Page
             {
                 item.Selected = true;
             }
-        checkbox1.Text = "Deselect All";
-    }
+            checkbox1.Text = "Deselect All";
+        }
         else {
             foreach (ListItem item in CheckBoxList1.Items)
             {
