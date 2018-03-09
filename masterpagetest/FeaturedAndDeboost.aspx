@@ -50,17 +50,17 @@
     <div style="width:80%;float:left;overflow: auto;">
         <div id="gv_featured_title_id" class="footer" runat = "server"><h3 id="gv_featured_title_id_h3">Featured Campaigns</h3></div>
         <div id="gv_featured_id" runat="server" style="width: 100%;max-height: 200px; resize: both; overflow: auto; ">
-            <asp:GridView ID="featured_gv" runat="server" AllowSorting="True" AutoGenerateEditButton="True" OnRowEditing="featured_gv_RowEditing">
+            <asp:GridView ID="featured_gv" runat="server" AllowSorting="True">
             </asp:GridView>
         </div>
         <div id="gv_deboost_title_id" class="footer" runat = "server"><h3 id="gv_deboost_title_id_h3">Deboost Campaigns</h3> </div>
         <div id="gv_deboost_id" runat="server" style="width: 100%;  max-height: 200px; resize: both; overflow: auto;">
-            <asp:GridView ID="deboost_gv" runat="server" AllowSorting="True" AutoGenerateEditButton="True">
+            <asp:GridView ID="deboost_gv" runat="server" AllowSorting="True">
             </asp:GridView>
         </div>
         <div id="gv_maxnum_title_id" class="footer" runat = "server"><h3 id="gv_maxnum_title_id_h3">MaxNum Settings</h3> </div>
         <div id="gv_maxnum_id" runat="server" style="width: 100%;  max-height: 200px; resize: both; overflow: auto;">
-            <asp:GridView ID="gv_maxnum" runat="server" AllowSorting="True" AutoGenerateEditButton="True">
+            <asp:GridView ID="gv_maxnum" runat="server" AllowSorting="True">
             </asp:GridView>
         </div>
     </div>
