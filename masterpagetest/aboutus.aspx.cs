@@ -31,23 +31,11 @@ public partial class aboutus : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+        string body = this.CreateEmailBody(GetGridviewData(GridView1));
         string smtpAddress = "smtp.gmail.com";
         int portNumber = 587;
         string emailTo = email_txtbox.Text;
         string subject = "Test Emails " + DateTime.Now.ToString("dd.MM.yyyy HH:mm");
-        string body = "<div style = 'width: 50%'>";
-        body += "<img src=http://i.imgur.com/jFekwMW.png>";
-        body += "<br />";
-        //for (int j = 0; j < links.Length; j++)
-        //{
-        //    body += "<p><a rel='nofollow'; target='_blank'; href='" + links[j] + "'><b>Email Link nr" + j + "</b></a></p>";
-        //}
-        body += GetGridviewData(GridView1);
-        body += "Thanks,";
-        body += "<br />";
-        body += "<b>dBTechnologies</b>";
-        body += "</div>";
-
         using (MailMessage mail = new MailMessage())
         {
             mail.From = new MailAddress("danitestrubrikk@gmail.com", "dBTechnologies");
@@ -72,10 +60,20 @@ public partial class aboutus : System.Web.UI.Page
         gv.RenderControl(htw);
         return strBuilder.ToString();
     }
+
+    private string CreateEmailBody(string gridview)
+    {
+        string body = string.Empty;
+        using (StreamReader reader = new StreamReader(Server.MapPath("~/EmailTemplate.html")))
+        {   body = reader.ReadToEnd();  }
+        body = body.Replace("{gridview}", gridview);
+        return body;
+    }
     public override void VerifyRenderingInServerForm(Control control)
     {
-        /* Verifies that the control is rendered */
+        /* For not inside runat-server issue when reading gridview for html email body */
     }
+
 
 
 }

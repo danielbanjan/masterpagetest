@@ -6,10 +6,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" Runat="Server">        
-    <div style="width:15%;float:left;">
+    <div style="width:20%;float:left;">
         <div style="padding-top:5px;">Please select a country:</div>
         <div style="padding-top:5px;padding-bottom:25px;">
-            <asp:DropDownList ID="Countries" runat="server" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True" Width="75%">
+            <asp:DropDownList ID="Countries" runat="server" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True" Width="60%">
                 <asp:ListItem Enabled="true" Text="Select Country" Value="-1"></asp:ListItem>
                 <asp:ListItem Text="Argentina" Value="AR"></asp:ListItem>
                 <asp:ListItem Text="Australia" Value="AU"></asp:ListItem>
@@ -36,9 +36,10 @@
                 <asp:ListItem Text="UK" Value="UK"></asp:ListItem>
                 <asp:ListItem Text="Vietnam" Value="VN"></asp:ListItem>
             </asp:DropDownList>
+            <asp:Button ID="updatebtn" style="float:right;margin-right:15px;" runat="server" OnClientClick="javascript:return confirm('Are you sure you want to update?')" Text="Update" />
             <div style="padding-top:15px;">
                 <asp:CheckBox ID="SA_cbx_fdm" style="padding-left:3px" runat="server" AutoPostBack="True" Text="Select All" OnCheckedChanged="SA_cbx_fdm_CheckedChanged" />
-                <asp:CheckBoxList ID="fdm_cbx" runat="server" style="border:solid;border-width:0.1px;border-color:darkgrey;width:75%" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True">
+                <asp:CheckBoxList ID="fdm_cbx" runat="server" style="border:solid;border-width:0.1px;border-color:darkgrey;width:60%" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True">
                     <asp:ListItem>Featured Campaigns</asp:ListItem>
                     <asp:ListItem>Deboost Campaigns</asp:ListItem>
                     <asp:ListItem>MaxNum Settings</asp:ListItem>
@@ -46,10 +47,10 @@
             </div>
         </div>
     </div>
-    <div style="width:85%;float:left;overflow: auto;">
+    <div style="width:80%;float:left;overflow: auto;">
         <div id="gv_featured_title_id" class="footer" runat = "server"><h3 id="gv_featured_title_id_h3">Featured Campaigns</h3></div>
         <div id="gv_featured_id" runat="server" style="width: 100%;max-height: 200px; resize: both; overflow: auto; ">
-            <asp:GridView ID="featured_gv" runat="server" AllowSorting="True" AutoGenerateEditButton="True">
+            <asp:GridView ID="featured_gv" runat="server" AllowSorting="True" AutoGenerateEditButton="True" OnRowEditing="featured_gv_RowEditing">
             </asp:GridView>
         </div>
         <div id="gv_deboost_title_id" class="footer" runat = "server"><h3 id="gv_deboost_title_id_h3">Deboost Campaigns</h3> </div>
