@@ -36,7 +36,6 @@
                 <asp:ListItem Text="UK" Value="UK"></asp:ListItem>
                 <asp:ListItem Text="Vietnam" Value="VN"></asp:ListItem>
             </asp:DropDownList>
-            <asp:Button ID="updatebtn" style="float:right;margin-right:15px;" runat="server" OnClientClick="javascript:return confirm('Are you sure you want to update?')" Text="Update" />
             <div style="padding-top:15px;">
                 <asp:CheckBox ID="SA_cbx_fdm" style="padding-left:3px" runat="server" AutoPostBack="True" Text="Select All" OnCheckedChanged="SA_cbx_fdm_CheckedChanged" />
                 <asp:CheckBoxList ID="fdm_cbx" runat="server" style="border:solid;border-width:0.1px;border-color:darkgrey;width:60%" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True">

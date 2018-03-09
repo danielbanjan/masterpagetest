@@ -23,6 +23,8 @@
                 <li><a href="Contactus.aspx">Contact Us</a></li>
                 <li><a href="Aboutus.aspx">About Us</a></li>
             </ul>
+            <div style="font-size: 13px;font-weight: bold;text-align:right;vertical-align:top;padding:5px 5px 0px 0px">Telefon: 0741317463</div>
+            <div style="font-size: 13px;font-weight: bold;text-align:right;vertical-align:top;padding:5px 5px 0px 0px">Adresa: Str Avram Iancu Nr 463 Bl3 SC2</div>
         </div>
         <div class="content">
             <asp:ContentPlaceHolder id="ContentBody" runat="server">

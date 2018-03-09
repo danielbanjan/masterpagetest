@@ -34,7 +34,8 @@ body {
 }
 
 .menu {
-    background-color: rgb(10,110,178);
+    background-color: #000000;
+    /*background-color: rgb(10,110,178);*/
     width: 100%;
     padding: 0;
     height: 40px;
@@ -43,13 +44,14 @@ body {
 }
 
 
-.menu ul li {
-    float: left;
-    display: block;
-    list-style: none;
-    border-right: 1px solid rgb(10,85,125);
-    border-left: 1px solid rgb(67,153,200);
-}
+    .menu ul li {
+        float: left;
+        display: block;
+        list-style: none;
+        border-right: 1px solid #ffffff;
+        /*border-right: 1px solid rgb(10,85,125);
+        border-left: 1px solid rgb(67,153,200);*/
+    }
 
 .menu ul li a {
     font-size: 13px;
@@ -60,10 +62,11 @@ body {
     text-decoration: none;
 }
 
-.menu ul li:hover {
-        background-color: rgb(14,79,114);
-        border-right: 1px solid rgb(14,89,130);
-    }
+        .menu ul li:hover {
+            background-color: #424242;
+            /*background-color: rgb(14,79,114);
+            border-right: 1px solid rgb(14,89,130);*/
+        }
 
 .clear {
     clear: both;

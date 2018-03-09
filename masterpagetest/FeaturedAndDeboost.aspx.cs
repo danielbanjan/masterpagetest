@@ -15,9 +15,9 @@ public partial class FeaturedAndDeboost : System.Web.UI.Page
     DataTable dt_d;
     SqlDataAdapter sda_m;
     DataTable dt_m;
-    SqlCommandBuilder scb_f;
-    SqlCommandBuilder scb_d;
-    SqlCommandBuilder scb_m;
+    //SqlCommandBuilder scb_f;
+    //SqlCommandBuilder scb_d;
+    //SqlCommandBuilder scb_m;
     protected void Page_Load(object sender, EventArgs e)
     {
         gv_featured_id.Visible = false;
@@ -55,9 +55,6 @@ public partial class FeaturedAndDeboost : System.Web.UI.Page
                         sda_f = new SqlDataAdapter(sqlcom_f);
                         dt_f = new DataTable();
                         sda_f.Fill(dt_f);
-                        //var row = dt_f.Select("domain = 'jobino.de'").FirstOrDefault();
-                        //string searchedValue = row["categorykey"].ToString();
-                        //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + searchedValue + "');", true);
                         featured_gv.DataSource = dt_f;
                         featured_gv.DataBind();
                         gv_featured_id.Visible = true;
@@ -179,16 +176,6 @@ public partial class FeaturedAndDeboost : System.Web.UI.Page
 
     protected void fdm_cbx_SelectedIndexChanged(object sender, EventArgs e)
     {
-    }
-
-    protected void updatebtn_Click(object sender, EventArgs e)
-    {
-            scb_f = new SqlCommandBuilder(sda_f);
-            sda_f.Update(dt_f);
-            scb_d = new SqlCommandBuilder(sda_d);
-            sda_d.Update(dt_d);
-            scb_m = new SqlCommandBuilder(sda_m);
-            sda_m.Update(dt_m);
     }
 
     protected void featured_gv_RowEditing(object sender, GridViewEditEventArgs e)
