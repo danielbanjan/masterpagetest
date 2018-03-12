@@ -15,9 +15,6 @@ public partial class FeaturedAndDeboost : System.Web.UI.Page
     DataTable dt_d;
     SqlDataAdapter sda_m;
     DataTable dt_m;
-    //SqlCommandBuilder scb_f;
-    //SqlCommandBuilder scb_d;
-    //SqlCommandBuilder scb_m;
     protected void Page_Load(object sender, EventArgs e)
     {
         gv_featured_id.Visible = false;
@@ -178,8 +175,4 @@ public partial class FeaturedAndDeboost : System.Web.UI.Page
     {
     }
 
-    protected void featured_gv_RowEditing(object sender, GridViewEditEventArgs e)
-    {
-        featured_gv.EditIndex = e.NewEditIndex;
-    }
 }

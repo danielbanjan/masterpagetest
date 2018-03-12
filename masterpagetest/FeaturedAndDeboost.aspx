@@ -37,11 +37,11 @@
                 <asp:ListItem Text="Vietnam" Value="VN"></asp:ListItem>
             </asp:DropDownList>
             <div style="padding-top:15px;">
-                <asp:CheckBox ID="SA_cbx_fdm" style="padding-left:3px" runat="server" AutoPostBack="True" Text="Select All" OnCheckedChanged="SA_cbx_fdm_CheckedChanged" />
+                <asp:CheckBox ID="SA_cbx_fdm" style="padding-left:3px" runat="server" AutoPostBack="True" Text="Deselect All" OnCheckedChanged="SA_cbx_fdm_CheckedChanged" Checked="True" />
                 <asp:CheckBoxList ID="fdm_cbx" runat="server" style="border:solid;border-width:0.1px;border-color:darkgrey;width:60%" OnSelectedIndexChanged="Countries_SelectedIndexChanged" AutoPostBack="True">
-                    <asp:ListItem>Featured Campaigns</asp:ListItem>
-                    <asp:ListItem>Deboost Campaigns</asp:ListItem>
-                    <asp:ListItem>MaxNum Settings</asp:ListItem>
+                    <asp:ListItem Selected="True">Featured Campaigns</asp:ListItem>
+                    <asp:ListItem Selected="True">Deboost Campaigns</asp:ListItem>
+                    <asp:ListItem Selected="True">MaxNum Settings</asp:ListItem>
                 </asp:CheckBoxList>
             </div>
         </div>

@@ -79,13 +79,11 @@ public partial class DeleteUsers : System.Web.UI.Page
                 }
             }
         }
-
         if (flag == 1)
         {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Deleted users from all selected portals.')", true);
         }
     }
-
 }
 
     protected void Check_Clicked(object sender, EventArgs e)

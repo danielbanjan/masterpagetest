@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Delete Users" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DeleteUsers.aspx.cs" Inherits="DeleteUsers" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DeleteUsers.aspx.cs" Inherits="DeleteUsers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" Runat="Server">
     Delete Users
@@ -8,13 +8,16 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" Runat="Server">
     <div style="width:100%">
         <div id="inputemail" style="width:30%;height:5%;padding-bottom:5px;padding-right:12px; float: left;" runat="server">Please Input Email</div>
-        <div> <asp:CheckBox id="checkbox1" runat="server" AutoPostBack="True" Text="Select All" TextAlign="Right" OnCheckedChanged="Check_Clicked"/>
+        <div> 
+            <asp:CheckBox id="checkbox1" runat="server" AutoPostBack="True" Text="Select All" TextAlign="Right" OnCheckedChanged="Check_Clicked"/>
         </div>
     </div>
-    <div style="width:25%;padding-right:5px;float: left;"><asp:TextBox ID="TextBox1" runat="server" Width="300px" Height="100px" TextMode="MultiLine"></asp:TextBox></div>
-    
-    <div style="width:5%;padding-right:5px;float: left;"><asp:Button runat="server" ID="btn" class ="button" Text="Delete" OnClientClick="javascript:return confirm('Are you sure you want to delete?');" 
-        onclick="Button1_Click"/></div>
+    <div style="width:25%;padding-right:5px;float: left;">
+        <asp:TextBox ID="TextBox1" placeholder="test@test.com" runat="server" style="max-width:300px" Width="300px" Height="100px" TextMode="MultiLine"></asp:TextBox>
+    </div>
+    <div style="width:5%;padding-right:5px;float: left;">
+        <asp:Button runat="server" ID="btn" class ="button" Text="Delete" OnClientClick="javascript:return confirm('Are you sure you want to delete?');" onclick="Button1_Click"/>
+    </div>
     <div style="width:25%;float:left">
         <asp:CheckBoxList ID="CheckBoxList1" runat="server" AutoPostBack="True" >
             <asp:ListItem Text="Argentina" Value="AR"></asp:ListItem>
